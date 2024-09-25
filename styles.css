@@ -1,0 +1,503 @@
+.navbar .form-control {
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #fff; /* White border */
+}
+
+.navbar .form-control:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Focus effect */
+}
+
+.navbar .btn-outline-light {
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #848080; /* White border */
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Background on hover */
+}
+
+/* ----- ส่วนฮีโร่ ----- */
+.hero-section {
+    position: relative;
+    
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ----- ส่วนภาพรวม (Overview Section) ----- */
+
+/* Overview Section Styles */
+
+#overview {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text for better contrast */
+}
+
+.overview-section h2,
+.overview-section .lead {
+    color: #121111; /* White color for headings and lead text */
+}
+
+.overview-section .card {
+    border: none;
+}
+
+.overview-section .card-body h3,
+.overview-section .card-body p {
+    color: #000; /* Ensure the card's text is black for contrast */
+}
+
+.overview-section .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.modal-content {
+    background-color: #F0E68C; /* Light yellow background for modal */
+}
+
+.modal-header .modal-title {
+    color: #000; /* Ensure modal title has black text for contrast */
+}
+
+.modal-body p {
+    color: #000; /* Black text in the modal body */
+}
+
+
+/* Highlights Section */
+#highlights {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text for better contrast */
+}
+
+/* Optional: Adjust the card background if needed */
+#highlights .card {
+    background-color: #4f4e4e; /* Dark gray background for the cards */
+    color: #ffffff; /* White text on the cards */
+}
+
+#highlights h2 {
+    color: #f9f9f9; /* Gray color for the heading */
+}
+
+#highlights p.lead {
+    color: #ffffff; /* Gray color for the paragraph text */
+}
+
+
+/* ----- ส่วนปุ่ม ----- */
+.btn-primary {
+    background-color: #343435;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-warning {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+}
+.btn-h
+
+/* ----- ส่วนฟุตเตอร์ ----- */
+footer {
+    background-color: #343a40;
+}
+
+footer p {
+    margin: 0;
+}
+/*หน้าตารางกิจกรรม
+/* ----- ส่วนตารางเวลา (Schedule Section) ----- */
+.schedule-section {
+    background-color: #f6fafa; /* พื้นหลังที่นุ่มนวล */
+}
+
+.ftco-section {
+    padding: 60px 0;
+    background-color: rgb(74, 73, 73); /* Background color for the section */
+    color: white; /* Text color */
+}
+
+/* ----- ส่วนกฎระเบียบ (Rules Section) ----- */
+.rules-section {
+    background-color: #f0f4f8; /* สีพื้นหลังที่นุ่มนวล */
+    border-top: 1px solid #ddd; /* เส้นขอบด้านบน */
+}
+
+.rules-section h2 {
+    font-family: 'Roboto', sans-serif; /* Choose a stylish font */
+    font-weight: bold; /* Make it bold */
+    text-transform: uppercase; /* Make it uppercase for emphasis */
+    letter-spacing: 2px; /* Add some space between letters */
+}
+
+.rules-section ul li {
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+}
+
+.rules-section img {
+    max-width: 100%; 
+    height: auto; 
+    margin-top: 20px; 
+}
+
+
+.list-unstyled li {
+    padding: 5px 0; 
+    border-bottom: 1px solid #161515; 
+}
+
+.footer {
+    background-color: #e9ecef; 
+}
+.schedule-section {
+    background-color: #fdf5e6; 
+}
+
+
+.location-section {
+    background-color: #F9EBAF; 
+}
+
+.location-section h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.location-section h4 {
+    font-size: 1.8rem; 
+}
+
+.location-section p {
+    font-size: 1.2rem; 
+}
+
+.location-section img {
+    border-radius: 8px; 
+}
+
+
+
+#register .section-title {
+    color: #ff6600; 
+}
+
+#register p {
+    color: #333; 
+}
+
+#register {
+    background-color: #ecd390; 
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.ftco-section {
+    background-color: #f8e5b0; 
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff; 
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; 
+}
+
+
+
+.img-fluid {
+    width: 100%; 
+    height: auto; 
+    }
+    .row {
+    margin: 0; 
+    }
+    .img-container {
+    padding: 0; 
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .header-area .main-nav .nav li a.active:after {
+      display: none;
+    }
+    .header-area .main-nav .logo {
+      color: #1e1e1e;
+    }
+    .header-area.header-sticky .nav li a:hover,
+    .header-area.header-sticky .nav li a.active {
+      color: #656c74!important;
+      opacity: 1;
+    }
+    .header-area {
+      background-color: #f7f7f7;
+      padding: 0px 15px;
+      height: 80px;
+      box-shadow: none;
+      text-align: center;
+    }
+    .header-area .container {
+      padding: 0px;
+    }
+    .header-area .logo {
+      margin-left: 30px;
+    }
+    .header-area .menu-trigger {
+      display: block !important;
+    }
+    .header-area .main-nav {
+      overflow: hidden;
+    }
+    .header-area .main-nav .nav {
+      float: none;
+      width: 100%;
+      display: none;
+      -webkit-transition: all 0s ease 0s;
+      -moz-transition: all 0s ease 0s;
+      -o-transition: all 0s ease 0s;
+      transition: all 0s ease 0s;
+      margin-left: 0px;
+    }
+    .header-area .main-nav .nav li:first-child {
+      border-top: 1px solid #eee;
+    }
+    .header-area.header-sticky .nav {
+      margin-top: 80px !important;
+    }
+    .header-area .main-nav .nav li {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+    .header-area .main-nav .nav li a {
+      height: 50px !important;
+      line-height: 50px !important;
+      padding: 0px !important;
+      border: none !important;
+      background: #f7f7f7 !important;
+      color: #232d39 !important;
+    }
+    .header-area .main-nav .nav li a:hover {
+      background: #eee !important;
+      color: #656c74!important;
+    }
+    .header-area .main-nav .nav li.submenu ul {
+      position: relative;
+      visibility: inherit;
+      opacity: 1;
+      z-index: 1;
+      transform: translateY(0%);
+      transition-delay: 0s, 0s, 0.3s;
+      top: 0px;
+      width: 100%;
+      box-shadow: none;
+      height: 0px;
+    }
+    .header-area .main-nav .nav li.submenu ul li a {
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .header-area .main-nav .nav li.submenu ul li a:hover:before {
+      width: 0px;
+    }
+    .header-area .main-nav .nav li.submenu ul.active {
+      height: auto !important;
+    }
+    .header-area .main-nav .nav li.submenu:after {
+      color: #3B566E;
+      right: 25px;
+      font-size: 14px;
+      top: 15px;
+    }
+    .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
+      height: 0px;
+    }
+  }
+    
+   /* Global Styles */
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
+  }
+  
+  a {
+      color: #007bff;
+      text-decoration: none;
+  }
+  
+  a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+      background-color: #007bff;
+  }
+  
+  .navbar-brand {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      color: #fff !important;
+  }
+  
+  .navbar-nav .nav-link {
+      font-size: 1.2rem;
+      padding: 10px 15px;
+      color: #fff !important;
+  }
+  
+  .navbar-nav .nav-link:hover {
+      background-color: #0056b3;
+      border-radius: 5px;
+  }
+  
+  .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .form-control {
+      border-radius: 20px;
+      padding: 5px 15px;
+  }
+  
+  /* About Section */
+  .about-item {
+      padding: 5px 0;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+  }
+  
+  .about-item img {
+      max-width: 100%;
+      border-radius: 10px;
+  }
+  
+  .about-item .left-image {
+      margin-bottom: 20px;
+  }
+  
+  .about-item h4 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-top: 20px;
+  }
+  
+  .about-item ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  
+  .about-item ul li {
+      background-color: #f8f9fa;
+      padding: 10px;
+      margin: 10px 0;
+  
+      border-radius: 5px;
+  }
+  
+  .about-item ul li:hover {
+      background-color: #e9ecef;
+  }
+  
+  /* Upcoming Shows Section */
+  .about-upcoming-shows {
+      padding: 10px 0;
+      background-color: #ffffff;
+      color: #000000;
+      border-radius: 10px;
+  }
+  
+  .about-upcoming-shows h2 {
+      font-size: 2rem;
+      font-weight: bold;
+  }
+  
+  .about-upcoming-shows p {
+      font-size: 1.1rem;
+  }
+  
+  .about-upcoming-shows ul {
+      list-style-type: disc;
+      padding-left: 20px;
+  }
+  
+  .about-upcoming-shows ul li {
+      margin-bottom: 10px;
+  }
+  
+  .about-upcoming-shows h4 {
+      margin-top: 30px;
+      font-size: 1.5rem;
+  }
+  
+  .nav-item {
+      display: flex;
+      justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+      align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+      height: 10vh; /* ตั้งค่าความสูงเต็มหน้าจอเพื่อจัดตรงกลาง */
+  }
+  
+  .next {
+      color: black;
+      background-color:white ;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 40%;
+  }
+  
+  .nav-item1 {
+      display: flex;
+      justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+      align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+      height: 10vh; /* ตั้งค่าความสูงเต็มหน้าจอเพื่อจัดตรงกลาง */
+  }
+  
+  .back {
+      color: black;
+      background-color:white ;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 40%;
+  }
+  
+  @media (min-width: 767px) {
+    .header-area .main-nav .nav {
+      display: flex !important;
+    }
+  }
+  
+  

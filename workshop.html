@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Carousel Example</title>
+    
+    <style>
+        /* Custom styles for the carousel */
+        /* Custom styles for the carousel */
+        .carousel-item {
+            width: 100%; 
+            height: auto; 
+            object-fit: cover; 
+        }
+
+        .carousel-item img {
+            height: 100%; /* Make the image cover the full height of the carousel item */
+            object-fit: cover; /* Ensure the image covers the area without stretching */
+        }
+
+        .carousel-caption {
+            background: rgba(147, 88, 40, 0.746); /* Add a semi-transparent background to captions for better readability */
+            padding: 5px 2%; /* Add some padding */
+            border-radius: 10px; /* Rounded corners for the caption */
+            width: 40%; /* ตั้งค่าความกว้างที่ต้องการ เช่น 50% ของ container */
+            margin: 0 auto;
+        }
+        @media (min-width: 767px) {
+    .header-area .main-nav .nav {
+      display: flex !important;
+    }
+  }
+  .nav-item1 {
+      display: flex;
+      justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+      align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+      height: 10vh; /* ตั้งค่าความสูงเต็มหน้าจอเพื่อจัดตรงกลาง */
+  }
+  .nav-item {
+      display: flex;
+      justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+      align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+      height: 10vh; /* ตั้งค่าความสูงเต็มหน้าจอเพื่อจัดตรงกลาง */
+  }
+  .navbar {
+      background-color: #007bff;
+  }
+  
+  .navbar-brand {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      color: #fff !important;
+  }
+  
+  .navbar-nav .nav-link {
+      font-size: 1.2rem;
+      padding: 10px 15px;
+      color: #fff !important;
+  }
+  
+  .navbar-nav .nav-link:hover {
+      background-color: #0056b3;
+      border-radius: 5px;
+  }
+  
+  .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.5);
+  }
+  @media (max-width: 767px) {
+    .header-area .main-nav .nav li a.active:after {
+      display: none;
+    }
+    .header-area .main-nav .logo {
+      color: #1e1e1e;
+    }
+    .header-area.header-sticky .nav li a:hover,
+    .header-area.header-sticky .nav li a.active {
+      color: #656c74!important;
+      opacity: 1;
+    }
+    .header-area {
+      background-color: #f7f7f7;
+      padding: 0px 15px;
+      height: 80px;
+      box-shadow: none;
+      text-align: center;
+    }
+    .header-area .container {
+      padding: 0px;
+    }
+    .header-area .logo {
+      margin-left: 30px;
+    }
+    .header-area .menu-trigger {
+      display: block !important;
+    }
+    .header-area .main-nav {
+      overflow: hidden;
+    }
+    .header-area .main-nav .nav {
+      float: none;
+      width: 100%;
+      display: none;
+      -webkit-transition: all 0s ease 0s;
+      -moz-transition: all 0s ease 0s;
+      -o-transition: all 0s ease 0s;
+      transition: all 0s ease 0s;
+      margin-left: 0px;
+    }
+    .header-area .main-nav .nav li:first-child {
+      border-top: 1px solid #eee;
+    }
+    .header-area.header-sticky .nav {
+      margin-top: 80px !important;
+    }
+    .header-area .main-nav .nav li {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+    .header-area .main-nav .nav li a {
+      height: 50px !important;
+      line-height: 50px !important;
+      padding: 0px !important;
+      border: none !important;
+      background: #f7f7f7 !important;
+      color: #232d39 !important;
+    }
+    .header-area .main-nav .nav li a:hover {
+      background: #eee !important;
+      color: #656c74!important;
+    }
+    .header-area .main-nav .nav li.submenu ul {
+      position: relative;
+      visibility: inherit;
+      opacity: 1;
+      z-index: 1;
+      transform: translateY(0%);
+      transition-delay: 0s, 0s, 0.3s;
+      top: 0px;
+      width: 100%;
+      box-shadow: none;
+      height: 0px;
+    }
+    .header-area .main-nav .nav li.submenu ul li a {
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .header-area .main-nav .nav li.submenu ul li a:hover:before {
+      width: 0px;
+    }
+    .header-area .main-nav .nav li.submenu ul.active {
+      height: auto !important;
+    }
+    .header-area .main-nav .nav li.submenu:after {
+      color: #3B566E;
+      right: 25px;
+      font-size: 14px;
+      top: 15px;
+    }
+    .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
+      height: 0px;
+    }
+  }
+  .navbar .form-control {
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #fff; /* White border */
+}
+
+.navbar .form-control:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Focus effect */
+}
+
+.navbar .btn-outline-light {
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #848080; /* White border */
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Background on hover */
+}
+.navbar .form-control {
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #fff; /* White border */
+}
+
+.navbar .form-control:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Focus effect */
+}
+
+.navbar .btn-outline-light {
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #848080; /* White border */
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Background on hover */
+}
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="Home.html" style="font-size: 1.8rem; letter-spacing: 1px;">BU Open House</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html" style="font-size: 1.2rem; padding: 10px 15px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Registration.html" style="font-size: 1.2rem; padding: 10px 15px;">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="workshop.html" style="font-size: 1.2rem; padding: 10px 15px;">Workshop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html" style="font-size: 1.2rem; padding: 10px 15px;">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" style="font-size: 1.2rem; padding: 10px 15px;">About</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#highlights" style="font-size: 1.2rem; padding: 10px 15px;">Highlights</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="speaker.html"style="font-size: 1.2rem; padding: 10px 15px;">Speaker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Schedule.html" style="font-size: 1.2rem; padding: 10px 15px;">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html" style="font-size: 1.2rem; padding: 10px 15px;">Gallerry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partner.html" style="font-size: 1.2rem; padding: 10px 15px;">Partner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ContactUs.html" style="font-size: 1.2rem; padding: 10px 15px;">Contact</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light btn-sm" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+
+
+    
+
+
+
+<div id="carouselExample" class="carousel slide " data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="Home copy.png" class="d-block w-100" alt="ภาพ 1">
+            <div class="carousel-caption d-none d-md-block">
+                
+
+
+                
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="เว็บไซต์ ลิงก์ประวัติ เทคโนโลยีและการเล่นเกม มืด เรียบง่าย สีน้ำเงินเข้ม.png" class="d-block w-100" alt="ภาพ 2">
+            <div class="carousel-caption d-none d-md-block">
+                
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="Home-2.png" class = "d-block w-100" alt="ภาพ 3">
+            <div class="carousel-caption d-none d-md-block">
+                
+
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <a class="carousel-control-part" href="#carouselExample" role="button" data-slide="part">
+        <span class="carousel-control-part-icon" aria-hidden="true"></span>
+        <span class="sr-only">part</span>
+    </a>
+</div>
+<style>
+    /* Global Styles */
+    :root {
+        --bs-primary: #0d6efd; /* Bootstrap primary color */
+        --bs-secondary-color: #6c757d; /* Bootstrap gray color */
+        --bs-secondary-bg: #f8f9fa; /* Light gray background color */
+    }
+
+    /* Marketing Section Styles */
+    .marketing {
+        padding: 60px 0; /* Add padding to the marketing section */
+    }
+
+    .featurette-divider {
+        margin: 60px 0; /* Add spacing for featurette dividers */
+    }
+
+    /* Placeholder Image Styles */
+    .bd-placeholder-img {
+        background-color: var(--bs-secondary-color);
+        color: var(--bs-white);
+    }
+    .carouselExample{
+        color: #0d6efd;
+
+    }
+
+
+        /* สไตล์ของปุ่ม */
+    .btn-secondary {
+        background-color: #31a3c8;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none;
+    }
+
+    #popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 900px;
+            text-align: center;
+        }
+
+    #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+
+
+
+        .close-btn {
+            margin-top: 10px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+
+   
+</style>
+</head>
+<body>
+
+<div class="container marketing">
+
+<!-- Three columns of text below the carousel -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Layout Example</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .featurette-divider {
+            margin: 10rem ; /* Custom spacing for featurettes */
+        }
+        .bd-placeholder-img {
+            font-size: 1.125rem; /* Adjusted size for placeholder images */
+            text-anchor: middle;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <!-- คณะนิเทศศาสตร์ -->
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoนิเทศ.jpeg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะนิเทศศาสตร์</h2>
+            <p>หากคุณเป็นคนที่มีความคิดสร้างสรรค์ รักการสื่อสาร และหลงใหลในโลกของสื่อ คณะนิเทศศาสตร์ มหาวิทยาลัยกรุงเทพ คือสถานที่ที่พร้อมจะพาคุณก้าวสู่เส้นทางแห่งความสำเร็จในอุตสาหกรรมการสื่อสารยุคใหม่</p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup1()";>View details »</a></p> -->
+            <p><a class="btn btn-secondary"  onclick="showPopup('เทคนิคการเป็นดีเจ และพอดแคสต์: DJ & Podcast Skills คณะนิเทศศาสตร์   สาขาวิชาวิทยุกระจายเสียง วิทยุโทรทัศน์ และการผลิตสื่อสตรีมมิ่ง' ,'ใครที่ชอบการพูดเป็นชีวิตจิตใจ เล่าอะไรใครก็ฟัง อยากจัดรายการเป็นของตัวเอง ต้องมาลองที่ Workshop นี้ Pro-DJ จาก บริษัท Mellow Pop เครือ MCOT จะพาน้องๆ ได้เรียนรู้การจัดรายการ Podcast ได้รู้หัวใจสำคัญของการเป็น DJ มืออาชีพ ลองฝึกออกเสียงชัดถ้อยชัดคำ ลองจัดลำดับเพลงในรายการ ลองเลือกเพลงให้สอดคล้องต่อเนื่อง ลองคิดเนื้อหาที่จะนำมาใช้ในการจัดรายการ การันตีความโปรให้ไปเปิดช่องของตัวเองได้เลยสถานที่ : Media Center อาคาร C2 ชั้น 24 รอบ ต่อวัน: เวลา 10.00 / 11.00 / 13.00 / 14.00 น.รอบละ 45 นาที จำนวนคนต่อรอบ 20 คน ')">view</a>
+            <div id="overlay"></div>
+            <div id="popup">
+                <h2 id="popup-title">เทคนิคการเป็นดีเจ และพอดแคสต์: DJ & Podcast Skills
+                    คณะนิเทศศาสตร์ | สาขาวิชาวิทยุกระจายเสียง วิทยุโทรทัศน์ และการผลิตสื่อสตรีมมิ่ง
+                    </h2>
+                <p id="popup-message">นี่คือรายละเอียดที่คุณต้องการแสดงใน Popup!</p>
+                <button class="close-btn" onclick="closePopup()">ปิด</button>
+            </div>
+            
+            
+        </div><!-- /.col-lg-4 -->
+
+        
+    
+        <!-- คณะบริหารธุรกิจ -->
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoบริหาร.jpeg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะบริหารธุรกิจ</h2>
+            <p>คณะบริหารธุรกิจ มหาวิทยาลัยกรุงเทพ มุ่งเน้นการพัฒนาทักษะทั้งด้านการบริหารจัดการและความคิดสร้างสรรค์ เพื่อเตรียมคุณให้พร้อมรับมือกับการเปลี่ยนแปลงในโลกธุรกิจยุคดิจิทัล และกลายเป็นนักธุรกิจรุ่นใหม่ที่มีความสามารถโดดเด่นในระดับสากล</p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+            <p><a class="btn btn-secondary"  onclick="showPopup('No details' , '-')">View</a></p>
+
+
+            <div id="overlay"></div>
+            <div id="popup">
+                <h2 id="popup-title">เทคนิคการเป็นดีเจ และพอดแคสต์: DJ & Podcast Skills
+                    คณะนิเทศศาสตร์ | สาขาวิชาวิทยุกระจายเสียง วิทยุโทรทัศน์ และการผลิตสื่อสตรีมมิ่ง
+                    </h2>
+                <p id="popup-message">นี่คือรายละเอียดที่คุณต้องการแสดงใน Popup!</p>
+                <button class="close-btn" onclick="closePopup()">ปิด</button>
+            </div>
+            
+
+            
+        </div><!-- /.col-lg-4 -->
+    
+        <!-- คณะบัญชี -->
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoบัญชี.jpeg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะบัญชี</h2>
+            <p>เรามีหลักสูตรที่ออกแบบมาเพื่อเสริมสร้างศักยภาพด้านการบริหารธุรกิจอย่างรอบด้าน ไม่ว่าจะเป็นการตลาด การเงิน การบริหารจัดการ การเป็นผู้ประกอบการ หรือการจัดการทรัพยากรมนุษย์ คณาจารย์ของเรามีความเชี่ยวชาญทั้งในภาคทฤษฎีและการปฏิบัติ ช่วยให้นักศึกษาได้พัฒนาความรู้และทักษะที่ตรงตามความต้องการของตลาด</p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+            <p><a class="btn btn-secondary"  onclick="showPopup('บัญชี... เพื่อนคู่คิดของธุรกิจ' , 'กิจกรรมสนุกๆ เรื่องใกล้ตัวง่ายๆ ทำความรู้จักกับหลักการบัญชี ฝึกบันทึกบัญชีรายรับ-รายจ่าย ฝึกหากำไร/ขาดทุนของกิจการ จากการเล่นบอร์ดเกม สถานที่ A3-501 (Diamond hall)​ ตลอดทั้งวัน')">view</a>
+                
+                <div id="overlay"></div>
+                <div id="popup">
+                    <h2 id="popup-title">เทคนิคการเป็นดีเจ และพอดแคสต์: DJ & Podcast Skills
+                        คณะนิเทศศาสตร์ | สาขาวิชาวิทยุกระจายเสียง วิทยุโทรทัศน์ และการผลิตสื่อสตรีมมิ่ง
+                        </h2>
+                    <p id="popup-message">นี่คือรายละเอียดที่คุณต้องการแสดงใน Popup!</p>
+                    <button class="close-btn" onclick="closePopup()">ปิด</button>
+                </div>
+        
+        </div><!-- /.col-lg-4 -->
+
+
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoมนุษย์.jpeg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะมนุษศาสตร์และจัดการท่องเที่ยว</h2>
+            <p>เรามีหลักสูตรที่ครอบคลุมทั้งด้านการท่องเที่ยว การโรงแรม และการบริการ ที่จะช่วยเสริมสร้างทักษะความรู้ให้คุณพร้อมสำหรับการทำงานในอุตสาหกรรมที่เติบโตอย่างต่อเนื่อง คณาจารย์ผู้เชี่ยวชาญของเรามีประสบการณ์ทั้งในระดับท้องถิ่นและนานาชาติ เพื่อช่วยให้นักศึกษาได้ฝึกฝนทักษะที่จำเป็น ผ่านการเรียนรู้ที่เน้นการปฏิบัติจริง</p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+
+            <p><a class="btn btn-secondary"  onclick="showPopup('การแข่งขันการแปลบทซีรีส์ เรื่อง 23.5 องศาที่โลกเอียง (ไทย-อังกฤษ)' ,'แข่งขันการแปลบทซีรีส์ จากภาษาไทยเป็นภาษาอังกฤษ ด้วยโจทย์ซีรีส์ จริง เตรียมตัวให้พร้อมเตรียมใจให้ลุกโชนเพื่อพร้อมสำหรับการแข่งขัน โดยผู้เข้าแข่งขันจะต้องมาลงทะเบียนหน้าห้องแข่งขันก่อน อ่านรายละเอียดและกติกาการแข่งขันได้ รอบละ 50 นาที จำนวนผู้เข้าร่วมต่อรอบ 40 คน')">view</a>
+                <div id="overlay"></div>
+                <div id="popup">
+                    <h2 id="popup-title">--</h2>
+                    <p id="popup-message">--</p>
+                    <button class="close-btn" onclick="closePopup()">ปิด</button>
+                </div>
+        
+        </div><!-- /.col-lg-4 -->
+
+
+
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="it.jpeg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะเทคโนโลยีสารสนเทศและนวัตกรรม</h2>
+            <p>ในยุคที่เทคโนโลยีเป็นหัวใจสำคัญของการเปลี่ยนแปลงทั่วโลก คณะเทคโนโลยีสารสนเทศและนวัตกรรม มหาวิทยาลัยกรุงเทพ พร้อมที่จะเป็นจุดเริ่มต้นสำหรับคุณในการก้าวสู่อนาคตที่เต็มไปด้วยโอกาสทางเทคโนโลยีและนวัตกรรมใหม่ๆ </p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+            <p><a class="btn btn-secondary"  onclick="showPopup('การพัฒนาเกมด้วย Unreal Engine' ,'ชวนน้องเกมเมอร์ตัวจริง ที่อยากไปได้ไกลกว่าแค่เป็นผู้เล่น แต่อยากเป็นผู้สร้าง มาร่วมสัมผัสประสบการณ์ในการพัฒนาเกมของจริง ด้วยโปรแกรม Unreal Engine พร้อมทั้งรับฟังคำแนะนำจากผู้เชี่ยวชาญในอุตสาหกรรมเกี่ยวกับเส้นทางอาชีพในสายงานด้านการพัฒนาเกม​โดยตรง สถานที่ : A1-405 รอบละ 90 นาที เฉพาะ 29 สิงหาคม - 30 สิงหาคม เวลา 09.00 - 10.30 น. เฉพาะ 29 สิงหาคม - 30 สิงหาคม เวลา 12.00 - 13.30 น. เฉพาะ 31 สิงหาคม เวลา 10.30 - 12.00 น. จำนวนคนต่อรอบ 80 คน')">view</a>
+                <div id="overlay"></div>
+                <div id="popup">
+                    <h2 id="popup-title">--</h2>
+                    <p id="popup-message">--</p>
+                    <button class="close-btn" onclick="closePopup()">ปิด</button>
+                </div>
+        
+        
+        </div><!-- /.col-lg-4 -->
+
+
+
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoวิศวะ.jpeg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะวิศวกรรมศาสตร์</h2>
+            <p>คณะวิศวกรรมศาสตร์ของเรามีหลักสูตรหลากหลายที่ครอบคลุมสาขาวิชาชั้นนำ ทั้งวิศวกรรมโยธา วิศวกรรมไฟฟ้า วิศวกรรมเครื่องกล และวิศวกรรมคอมพิวเตอร์ พร้อมด้วยสิ่งอำนวยความสะดวกที่ทันสมัยและห้องปฏิบัติการที่ครบครัน</p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+            <p><a class="btn btn-secondary"  onclick="showPopup('การเขียนโปรแกรมปัญญาประดิษฐ์เพื่อตรวจจับวัตถุ' ,'ไหนใครชอบโบกมือตามจอตรวจจับอุณหภูมิตามห้าง? อยากรู้กันไหมว่าโปรแกรมเหล่านั้นมีที่มาการทำงานยังไง มาเรียนรู้ของจริงได้ที่ Workshop ที่จะพาทุกคนรู้จักการเขียนโปรแกรม image processing และ object detection โดยใช้ AI พาทุกคนได้ลองเขียนโปรแกรมของจริง มีผลงาน AI เป็นของตัวเอง สถานที่ B4-102 เวลา 11.30-12.30 และ 14.30-15.30 รอบละ 60 นาที จำนวนผู้เข้าร่วมต่อรอบ 40 คน')">view</a></p>
+                <div id="overlay"></div>
+                <div id="popup">
+                    <h2 id="popup-title">--</h2>
+                    <p id="popup-message">--</p>
+                    <button class="close-btn" onclick="closePopup()">ปิด</button>
+                </div>
+        
+
+
+        
+        </div><!-- /.col-lg-4 -->
+
+
+
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoศิลป.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะศิลปกรรมศาสตร์</h2>
+            <p>นอกจากการเรียนรู้ในห้องเรียน คุณยังจะได้ร่วมมือกับโปรเจกต์ระดับมืออาชีพ ทั้งการจัดแสดงผลงาน การแข่งขันระดับประเทศและนานาชาติ รวมถึงโอกาสในการฝึกงานกับบริษัทและสตูดิโอชั้นนำ เพื่อเตรียมความพร้อมในการเป็นศิลปินและนักออกแบบที่มีผลงานโดดเด่นในวงการ</p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+            <p><a class="btn btn-secondary"  onclick="showPopup('Lifelong learning-VDO สื่อการสอน How to Build the best PORTFOLIO / COMPUTATIONAL SKILL FOR ART AND DESIGN' ,'สถานที่ :ห้อง B1-204 8 รอบ​ 10.00/10.30/11.00/11.30/13.00/13.30/14.00/14.30 รอบละ 30 นาที')">view</a></p>
+                
+                <div id="overlay"></div>
+                <div id="popup">
+                    <h2 id="popup-title">เทคนิคการเป็นดีเจ และพอดแคสต์: DJ & Podcast Skills
+                        คณะนิเทศศาสตร์ | สาขาวิชาวิทยุกระจายเสียง วิทยุโทรทัศน์ และการผลิตสื่อสตรีมมิ่ง
+                        </h2>
+                    <p id="popup-message">นี่คือรายละเอียดที่คุณต้องการแสดงใน Popup!</p>
+                    <button class="close-btn" onclick="closePopup()">ปิด</button>
+                </div>
+        
+        
+        
+        </div><!-- /.col-lg-4 -->
+
+
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoเศรษ.jpeg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะเศรษฐศาสตร์และการลงทุน</h2>
+            <p>คุณจะได้สัมผัสประสบการณ์ที่ไม่เหมือนใคร ผ่านการฝึกงานกับบริษัทการลงทุนและสถาบันการเงินชั้นนำ รวมถึงการเข้าร่วมโครงการวิจัยและสัมมนาที่จะช่วยเสริมสร้างทักษะการวิเคราะห์และการตัดสินใจในบริบททางเศรษฐกิจที่ซับซ้อน</p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+            <p><a class="btn btn-secondary"  onclick="showPopup('BU STOCK DETECTOR วิเคราะห์เศรษฐกิจพิชิตหุ้น' ,'การจำลองการซื้อ/ขายในตลาดหุ้นโดยใช้ข้อมูลข่าวสารมาวิเคราะห์เพื่อใช้ประกอบการตัดสินใจ ผู้เข้าร่วมจะรับทราบสถานการณ์หรือข่าวสารข้อมูลเพื่อใช้ประกอบในการตัดสินใจซื้อ/ขายหุ้นในแต่ละรอบ สามารถรับรู้ผลกำไร/ขาดทุน จากการซื้อหรือขายในแต่ละรอบ เปรียบเหมือนการลงทุนในตลาดหุ้นจริงๆ ทำการซื้อขายผ่านระบบ WEB-BASE พัฒนาโดยคณะเศรษฐศาสตร์และการลงทุน สถานที่ Diamond Hall รอบกิจกรรม: 6 รอบต่อวัน 09.00 10.00 11.00 13.00 14.00 15.00 รอบละ 45 นาที จำนวนคนต่อรอบ 40 คน')">view</a>
+                <div id="overlay"></div>
+                <div id="popup"> 
+                    <h2 id="popup-title">--</h2>
+                    <p id="popup-message">--</p>
+                    <button class="close-btn" onclick="closePopup()">ปิด</button>
+                </div>
+        
+        
+        
+        </div><!-- /.col-lg-4 -->
+
+   
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoปัต.jpeg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะสถาปัตยกรรมศาสตร์</h2>
+            <p>เรามีหลักสูตรที่ออกแบบมาเพื่อเสริมสร้างความรู้และทักษะที่จำเป็นในการออกแบบสถาปัตยกรรม ตั้งแต่การวิเคราะห์พื้นที่ การออกแบบเชิงสร้างสรรค์ จนถึงการนำเสนอผลงานในระดับมืออาชีพ</p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+
+            <p><a class="btn btn-secondary"  onclick="showPopup('การนำเสนอแนวความคิดการออกแบบด้วยเทคนิค Collage' , 'Workshop ที่จะมาช่วยเสริมจินตนาการของน้องๆ ให้กว้างมากยิ่งขึ้น ด้วยการใช้เทคนิคการปะติด (collage) เพื่อเสนอแนวความคิดเกี่ยวกับมุมมองทางสถาปัตยกรรม ผ่านการตัดภาพจากนิตยสาร เพื่อนำมาประกอบรวมเป็นไอเดียใหม่ ตามแนวคิดของตนเอง ไม่ว่าจะเป็นรูปภาพบ้าน ตึก สถาปัตยกรรม landscape รวมถึงผู้คนในรูปแบบต่างๆ แล้วมาดูกันว่าเราจะถ่ายทอดจินตนาการออกแบบมาในรูปแบบใด รับรองว่าจะสนุกกับการนำเสนอความคิดสร้างสรรค์อย่างแน่นอน สถานที่ : B5 ชั้น 2 รอบกิจกรรม: 2 รอบต่อวัน   11.00-11.40 / 14.00-14.40 น. รอบละ 40 นาที จำนวนคนต่อรอบ 20 คน  ')">view</a>
+                
+                <div id="overlay"></div>
+                <div id="popup">
+                    <h2 id="popup-title">เทคนิคการเป็นดีเจ และพอดแคสต์: DJ & Podcast Skills
+                        คณะนิเทศศาสตร์ | สาขาวิชาวิทยุกระจายเสียง วิทยุโทรทัศน์ และการผลิตสื่อสตรีมมิ่ง
+                        </h2>
+                    <p id="popup-message">นี่คือรายละเอียดที่คุณต้องการแสดงใน Popup!</p>
+                    <button class="close-btn" onclick="closePopup()">ปิด</button>
+                </div>
+        
+        
+        </div><!-- /.col-lg-4 -->
+
+
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoนิติ.jpeg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะนิติศาสตร์</h2>
+            <p>เรามีหลักสูตรที่ครอบคลุมทุกด้านของกฎหมาย ตั้งแต่กฎหมายแพ่ง กฎหมายอาญา จนถึงกฎหมายระหว่างประเทศ นักศึกษาจะได้เรียนรู้จากคณาจารย์ผู้เชี่ยวชาญที่มีประสบการณ์ในสาขากฎหมาย </p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+
+            <p><a class="btn btn-secondary"  onclick="showPopup('การวิเคราะห์คดีด้วยรูปแบบกิจกรรมศาลจำลอง' ,'สร้างแรงบันดาลใจ ในการประกอบวิชาชีพนักกฎหมาย ร่วมวิเคราะห์คดีจากข้อเท็จจริงที่ดัดแปลงเป็นละคร สะท้อนปัญหาสังคม ได้ทั้งความรู้ และท้าทายกระบวนการคิด วิเคราะห์ในเชิงกฎหมาย ไปกับกิจกรรมศ่าลจำลอง สถานที่ A3-301 รอบกิจกรรม: 5 รอบต่อวัน 09.00 น. / 10.00 น. /11.00 น. /14.00 น. / 15.00 น. รอบละ 30 นาที')">view</a>
+                <div id="overlay"></div>
+                <div id="popup"> 
+                    <h2 id="popup-title">--</h2>
+                    <p id="popup-message">--</p>
+                    <button class="close-btn" onclick="closePopup()">ปิด</button>
+                </div>
+        
+        
+        
+        </div><!-- /.col-lg-4 -->
+
+
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoการจัดการ.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">คณะการสร้างเจ้าของธุรกิจและการบริหารกิจการ</h2>
+            <p>ได้สัมผัสประสบการณ์ที่มีค่าในการฝึกงานกับบริษัทชั้นนำ รวมถึงการเข้าร่วมการประกวดแผนธุรกิจ และกิจกรรมสร้างเครือข่ายธุรกิจที่จะช่วยให้คุณเชื่อมต่อกับผู้เชี่ยวชาญในอุตสาหกรรม</p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+
+            <p><a class="btn btn-secondary"  onclick="showPopup('No details' ,'-')">view</a>
+                <div id="overlay"></div>
+                <div id="popup"> 
+                    <h2 id="popup-title">--</h2>
+                    <p id="popup-message">--</p>
+                    <button class="close-btn" onclick="closePopup()">ปิด</button>
+                </div>
+       
+        
+        </div><!-- /.col-lg-4 -->
+
+
+
+        <div class="col-lg-4 mb-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                <image href="logoนานา.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+            <h2 class="fw-normal">หลักสูตรนานาชาติ</h2>
+            <p>หลักสูตรนานาชาติของเรานำเสนอการศึกษาในหลากหลายสาขาวิชา ตั้งแต่การบริหารธุรกิจ การสื่อสารระหว่างประเทศ ไปจนถึงศิลปะและการออกแบบ โดยมุ่งเน้นการสร้างทักษะการสื่อสารและการทำงานในสภาพแวดล้อมที่หลากหลายทางวัฒนธรรม </p>
+            <!-- <p><a class="btn btn-secondary"  style="background-color: #31a3c8; color: white " onclick="showPopup()";>View details »</a></p> -->
+
+            <p><a class="btn btn-secondary"  onclick="showPopup('Business Idea Creation' ,'Step up to the Entrepreneurial Challenge and work with designated existing products from current BUSEM students. This challenge will cover the four crucial components of a basic business plan: Who, What, How, and USP (Unique Selling Proposition). All students who participate will receive a certificate of achievement. Join us to hone your entrepreneurial skills and experience real-world business planning. We look forward to seeing you there! C6, Theater room 4 rounds: 10:00-10:30 / 11:30-12:00 / 13:00-13:30 / 14:30-15:00 30 Min. 20 persons')">view</a>
+                <div id="overlay"></div>
+                <div id="popup"> 
+                    <h2 id="popup-title">--</h2>
+                    <p id="popup-message">--</p>
+                    <button class="close-btn" onclick="closePopup()">ปิด</button>
+                </div>
+       
+       
+        </div><!-- /.col-lg-4 -->
+
+
+
+
+
+
+
+    </div><!-- /.row -->
+    
+        
+
+        
+    </div><!-- /.row -->
+
+
+<hr class="featurette-divider">
+
+<script>
+    function showPopup(title, message) {
+        document.getElementById('popup-title').innerText = title;
+        document.getElementById('popup-message').innerText = message;
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
+
+
+    
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
